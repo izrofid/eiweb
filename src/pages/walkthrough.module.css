@@ -1,0 +1,41 @@
+.walkthrough-section {
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-background-surface-color);
+  margin: 2rem 0;
+  padding: 0.5rem 2rem 1.5rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.walkthrough-section h2, .walkthrough-section h3 {
+  color: var(--ifm-color-primary);
+  margin-top: 0;
+}
+.walkthrough-section ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+.walkthrough-section li {
+  margin-bottom: 0.25em;
+}
+.walkthrough-section strong, .walkthrough-section b {
+  color: var(--ifm-color-primary);
+}
+.walkthrough-section .location {
+  font-weight: bold;
+  color: var(--ifm-color-primary);
+}
+
+.locationHeading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.03);
+  padding-top: 1.2em;
+}
+
+.walkthrough-section > :first-child.locationHeading {
+  padding-top: 0;
+}
