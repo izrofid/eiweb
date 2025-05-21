@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeiweb=self.webpackChunkeiweb||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/eiweb/blog","blogTitle":"Blog","authorsListPath":"/eiweb/blog/authors"}')}}]);
