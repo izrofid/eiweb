@@ -4,19 +4,103 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 0;
+  width: 100%;
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  height: max-content;
 }
 
 .heroBanner, .heroBanner .hero__title, .heroBanner .hero__subtitle, .heroBanner .button {
   color: #fff !important;
 }
 
+.heroBannerContentWrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 330px;
+  box-sizing: border-box;
+}
+
+.heroBannerTextContent {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroBannerImage {
+  display: flex;
+  position: absolute;
+  right: 0;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 220px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.heroBannerImage img {
+  height: 100%;
+  width: auto;
+  background: #222;
+  display: block;
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .heroBannerContentWrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 1rem 2rem 1rem;
+    height: auto;
+    min-height: unset;
+  }
+
+  .heroBannerImage {
+    display: none;
+  }
+
+  .heroBanner, .heroBanner .hero__title, .heroBanner .hero__subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroBanner {
+    padding: 1rem 0.2rem;
+  }
+
+  .heroBannerContentWrapper {
+    gap: 1rem;
+    padding: 1rem 0.2rem 1rem 0.2rem;
+  }
+
+  .heroBanner .hero__title {
+    font-size: 1.3rem;
+  }
+
+  .heroBanner .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .heroBannerTextContent {
+    font-size: 0.98rem;
+  }
+
+  .bannerNotice, .officialSiteBannerContent {
+    font-size: 0.98rem;
   }
 }
 
@@ -98,14 +182,16 @@
   box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
   border-bottom: 2px solid #3a3f58;
   border-radius: 0 0 1.2rem 1.2rem;
+  gap: 2.5rem;
 }
 
 .officialSiteBannerContent {
-  max-width: 700px;
+  max-width: 520px;
   width: 100%;
   text-align: left;
   font-size: 1.08rem;
   line-height: 1.6;
+  flex: 1 1 0;
 }
 
 .officialSiteBannerContent strong {
@@ -120,4 +206,16 @@
   border-radius: 0.3em;
   padding: 0.1em 0.4em;
   font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .officialSiteBanner {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.2rem 0.5rem 1.1rem 0.5rem;
+  }
+
+  .officialSiteBannerImage {
+    height: 100px;
+  }
 }
