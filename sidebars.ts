@@ -1,4 +1,4 @@
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -15,23 +15,38 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   docs: [
     {
-      type: 'doc',
-      id: 'documentation/intro',
-      label: 'Introduction',
-    },
-    {
-      type: 'category',
-      label: 'Documentation',
+      type: "category",
+      label: "Documentation",
       items: [
         {
-          type: 'doc',
-          id: 'documentation/known-bugs',
-          label: 'Known Bugs',
+          type: "doc",
+          id: "documentation/intro",
+          label: "Introduction",
         },
         {
-          type: 'doc',
-          id: 'documentation/tmhm',
-          label: 'TM & HM Locations',
+          type: "doc",
+          id: "documentation/known-bugs",
+          label: "Known Bugs",
+        },
+        {
+          type: "doc",
+          id: "documentation/tmhm",
+          label: "TM & HM Locations",
+        },
+        {
+          type: "doc",
+          id: "documentation/megastones",
+          label: "Mega Stone Locations",
+        },
+        {
+          type: "doc",
+          id: "documentation/pokemart",
+          label: "Pokémart",
+        },
+                {
+          type: "doc",
+          id: "documentation/useful-npcs",
+          label: "Useful NPCs",
         },
       ],
       collapsed: false,
@@ -39,13 +54,13 @@ const sidebars: SidebarsConfig = {
   ],
   hof: [
     {
-      type: 'category',
-      label: 'Nuzlocke',
+      type: "category",
+      label: "Nuzlocke",
       items: [
         {
-          type: 'doc',
-          id: 'hof/rules',
-          label: 'Rules',
+          type: "doc",
+          id: "hof/rules",
+          label: "Rules",
         },
       ],
       collapsed: false,

@@ -1,32 +1,47 @@
 /* Custom styles for the Hall of Fame Rules doc */
 
+/* Light mode styles (default) */
 .hofRulesContainer {
-  background: #181a20;
+  background: #f8f9fc;
   border-radius: 0.7rem;
   box-shadow: 0 2px 16px 0 rgba(30, 60, 180, 0.06);
   padding: 2.2rem 1.5rem 2.2rem 1.5rem;
   margin: 2.5rem auto 2.5rem auto;
   max-width: 820px;
   border: none;
+  transition: background-color 0.2s ease;
 }
 
 .hofRulesContainer h1, .hofRulesContainer h2, .hofRulesContainer h3, .hofRulesContainer h4 {
-  color: #eaf1ff;
+  color: #1a1b25;
   margin-top: 2.2rem;
   margin-bottom: 1.1rem;
   font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+/* Dark mode styles */
+[data-theme='dark'] .hofRulesContainer {
+  background: #181a20;
+}
+
+[data-theme='dark'] .hofRulesContainer h1,
+[data-theme='dark'] .hofRulesContainer h2,
+[data-theme='dark'] .hofRulesContainer h3,
+[data-theme='dark'] .hofRulesContainer h4 {
+  color: #eaf1ff;
 }
 
 .hofRulesContainer h1 {
   font-size: 2.2rem;
-  border-bottom: 2px solid #3a7cff33;
+  border-bottom: 2px solid rgba(58, 124, 255, 0.15);
   padding-bottom: 0.4rem;
   margin-bottom: 2rem;
 }
 
 .hofRulesContainer h2 {
   font-size: 1.5rem;
-  border-left: 3px solid #3a7cff33;
+  border-left: 3px solid rgba(58, 124, 255, 0.15);
   padding-left: 0.7rem;
   background: none;
   border-radius: 0.2rem;
@@ -34,32 +49,63 @@
 
 .hofRulesContainer h3 {
   font-size: 1.15rem;
-  color: #5fa8ffcc;
+  color: var(--ifm-color-primary-dark);
+}
+
+[data-theme='dark'] .hofRulesContainer h1 {
+  border-bottom: 2px solid rgba(58, 124, 255, 0.2);
+}
+
+[data-theme='dark'] .hofRulesContainer h2 {
+  border-left: 3px solid rgba(58, 124, 255, 0.2);
+}
+
+[data-theme='dark'] .hofRulesContainer h3 {
+  color: rgba(95, 168, 255, 0.8);
 }
 
 .hofRulesContainer p, .hofRulesContainer ul, .hofRulesContainer ol {
-  color: #eaf1ff;
+  color: #2c3e50;
   font-size: 1.08rem;
   line-height: 1.7;
+  transition: color 0.2s ease;
 }
 
 .hofRulesContainer code {
-  background: #22242a;
-  color: #7ecbff;
+  background: #f1f5f9;
+  color: #3b82f6;
   border-radius: 0.3em;
   padding: 0.13em 0.45em;
   font-size: 0.98em;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .hofRulesContainer strong {
-  color: #fff;
+  color: #1e293b;
   font-weight: 700;
+  transition: color 0.2s ease;
+}
+
+[data-theme='dark'] .hofRulesContainer p,
+[data-theme='dark'] .hofRulesContainer ul,
+[data-theme='dark'] .hofRulesContainer ol {
+  color: #eaf1ff;
+}
+
+[data-theme='dark'] .hofRulesContainer code {
+  background: #22242a;
+  color: #7ecbff;
+}
+
+[data-theme='dark'] .hofRulesContainer strong {
+  color: #fff;
 }
 
 .hofRulesContainer hr {
   border: none;
-  border-top: 1.5px solid #3a7cff33;
+  border-top: 1.5px solid rgba(58, 124, 255, 0.15);
   margin: 2.5rem 0;
+  transition: border-color 0.2s ease;
 }
 
 .hofRulesContainer ul, .hofRulesContainer ol {
@@ -68,6 +114,10 @@
 
 .hofRulesContainer li {
   margin-bottom: 0.4rem;
+}
+
+[data-theme='dark'] .hofRulesContainer hr {
+  border-top: 1.5px solid rgba(58, 124, 255, 0.2);
 }
 
 @media (max-width: 600px) {
@@ -91,4 +141,41 @@
   text-indent: 0;
   position: absolute;
   left: 0;
+}
+
+/* TOC styling for light/dark mode */
+.hofRulesContainer ~ .theme-doc-toc-desktop .table-of-contents,
+.hofRulesContainer ~ .theme-doc-toc-mobile .table-of-contents {
+  transition: border-color 0.2s ease;
+}
+
+/* Improve dark mode table appearance */
+.hofRulesContainer table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.hofRulesContainer table th {
+  background-color: rgba(58, 124, 255, 0.1);
+  color: #2c3e50;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.hofRulesContainer table td,
+.hofRulesContainer table th {
+  padding: 12px 15px;
+  border: 1px solid rgba(58, 124, 255, 0.15);
+  transition: border-color 0.2s ease;
+}
+
+[data-theme='dark'] .hofRulesContainer table th {
+  background-color: rgba(58, 124, 255, 0.15);
+  color: #eaf1ff;
+}
+
+[data-theme='dark'] .hofRulesContainer table td,
+[data-theme='dark'] .hofRulesContainer table th {
+  border: 1px solid rgba(58, 124, 255, 0.2);
 }

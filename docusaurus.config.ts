@@ -80,7 +80,7 @@ const config: Config = {
         { to: "/trainers", label: "Trainers", position: "left" },
         {
           type: "doc",
-          docId: "documentation/known-bugs",
+          docId: "documentation/intro",
           position: "left",
           label: "Docs",
         },

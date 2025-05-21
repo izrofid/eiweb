@@ -61,23 +61,36 @@
     overflow-wrap: break-word;
 }
 
-/* TM/HM Number column (first column of 3-column table) */
+/* Mega Stone column (first column of 2-column table) */
 .tmhmTable th:first-child, .tmhmTable td:first-child {
-    width: 15%;
-    min-width:max-content;
+    width: 30%;
+    min-width: 120px;
+}
+
+/* Location column (second column of 2-column table) */
+.tmhmTable th:last-child, .tmhmTable td:last-child {
+    width: 70%;
 }
 
 /* Responsive design for different screen sizes */
 @media screen and (min-width: 768px) {
-    /* Name column (middle column of 3-column table or first column of 2-column table) */
-    .tmhmTable th:nth-child(2), .tmhmTable td:nth-child(2) {
-        min-width: max-content;
-        width: 15%;
+    .tmhmTable th:first-child, .tmhmTable td:first-child {
+        width: 25%;
     }
     
-    /* Location column (last column) */
     .tmhmTable th:last-child, .tmhmTable td:last-child {
-        width: 70%;
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .tmhmTable th:first-child, .tmhmTable td:first-child {
+        width: 20%;
+        min-width: 180px;
+    }
+    
+    .tmhmTable th:last-child, .tmhmTable td:last-child {
+        width: 80%;
     }
 }
 
